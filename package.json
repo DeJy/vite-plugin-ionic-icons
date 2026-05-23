@@ -1,0 +1,69 @@
+{
+  "name": "vite-plugin-ionic-icons",
+  "version": "1.0.0",
+  "description": "Vite plugin that auto-detects and bundles only the Ionic icons your project uses — icon tree-shaking with zero config.",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "ionic",
+    "ionic-framework",
+    "icons",
+    "svg",
+    "tree-shaking",
+    "react",
+    "vue",
+    "angular",
+    "svelte",
+    "mithril"
+  ],
+  "author": "Dominic Jean <dominic.jean@dejy.info>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeJy/vite-plugin-ionic-icons.git"
+  },
+  "homepage": "https://github.com/DeJy/vite-plugin-ionic-icons#readme",
+  "bugs": {
+    "url": "https://github.com/DeJy/vite-plugin-ionic-icons/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vite": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": false
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.0.0"
+  }
+}
