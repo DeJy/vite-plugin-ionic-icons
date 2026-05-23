@@ -28,7 +28,8 @@ export const PATTERNS: PatternDef[] = [
      */
     label: 'HTML attribute (JSX / Vue / Angular / Svelte / HTML)',
     // (?<![:\[]) prevents matching :name="var" (Vue dynamic) and [name]="var" (Angular)
-    regex: () => /<ion-icon\s+[^>]*?(?<![:\[])\bname=["']([\w-]+)["']/gs,
+    // i flag: HTML tags are case-insensitive (<ION-ICON> is valid HTML)
+    regex: () => /<ion-icon\s+[^>]*?(?<![:\[])\bname=["']([\w-]+)["']/gis,
   },
   {
     /**

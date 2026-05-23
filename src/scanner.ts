@@ -46,7 +46,7 @@ export function scanFile(filePath: string): string[] {
     const re = regex(); // fresh instance — resets lastIndex
     let match: RegExpExecArray | null;
     while ((match = re.exec(content)) !== null) {
-      icons.add(match[1]);
+      icons.add(match[1].toLowerCase());
     }
   }
 

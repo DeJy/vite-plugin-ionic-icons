@@ -55,6 +55,11 @@ describe('PATTERNS', () => {
     it('does not match when name attribute is missing', () => {
       expect(matchAll(L, '<ion-icon size="small" />')).toEqual([]);
     });
+
+    it('matches uppercase tag name (HTML is case-insensitive)', () => {
+      expect(matchAll(L, '<ION-ICON name="add-outline" />')).toEqual(['add-outline']);
+      expect(matchAll(L, '<Ion-Icon name="home" />')).toEqual(['home']);
+    });
   });
 
   // ── 2. Mithril hyperscript ─────────────────────────────────────────────────
