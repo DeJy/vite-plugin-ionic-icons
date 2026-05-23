@@ -1,0 +1,12 @@
+<!-- Angular fixture -->
+<!-- Detected icons: arrow-back (static), checkmark-circle (via [name]) -->
+<div>
+  <!-- Static attribute -->
+  <ion-icon name="arrow-back"></ion-icon>
+
+  <!-- Property binding with string literal -->
+  <ion-icon [name]="'checkmark-circle'"></ion-icon>
+
+  <!-- Dynamic variable — should NOT be detected -->
+  <ion-icon [name]="iconName"></ion-icon>
+</div>
